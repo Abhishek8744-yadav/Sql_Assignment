@@ -46,10 +46,13 @@ select to_char(sysdate) from orders;
 
 -- 15. Find week number of the year.
 select to_char(sysdate,'ww') from orders;
+
 -- 16. Find day name from date.
 select to_char(sysdate,'day') from orders;
+
 -- 17. Find quarter of the year.
 select to_char(sysdate, 'Q') AS current_quarter from orders;
+
 -- 18. Calculate age from DOB.
 SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, to_DATE ('2004-04-08','yyyy-mm-dd')) / 12) AS years_old FROM DUAL;
 
@@ -57,4 +60,5 @@ SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, to_DATE ('2004-04-08','yyyy-mm-dd')) / 12) 
 SELECT CASE WHEN TO_CHAR(order_date, 'DY', 'NLS_DATE_LANGUAGE=ENGLISH') IN ('SAT', 'SUN') THEN 'Weekend' ELSE 'Weekday' END AS Type_Day FROM ORDERS;
 
 -- 20. Find next Monday after a given date.
+
 Select next_day(order_date,'Monday') from ORDERS;
