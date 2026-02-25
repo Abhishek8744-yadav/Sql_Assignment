@@ -60,5 +60,5 @@ SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, to_DATE ('2004-04-08','yyyy-mm-dd')) / 12) 
 SELECT CASE WHEN TO_CHAR(order_date, 'DY', 'NLS_DATE_LANGUAGE=ENGLISH') IN ('SAT', 'SUN') THEN 'Weekend' ELSE 'Weekday' END AS Type_Day FROM ORDERS;
 
 -- 20. Find next Monday after a given date.
-
 Select next_day(order_date,'Monday') from ORDERS;
+
